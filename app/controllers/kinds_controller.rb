@@ -4,8 +4,9 @@ class KindsController < ApplicationController
   # GET /kinds
   def index
     @kinds = Kind.all
-
-    render json: {status: 'SUCCESS', message: 'Loaded kinds', data: @kinds}, status: :ok, include: {contacts: {only: [:name, :email]}}
+    render json: @kinds
+    # render json: {status: 'SUCCESS', message: 'Loaded kinds', data: @kinds}, status: :ok, include: {contacts: {only: [:name, :email]}}
+    
     #include: :contacts -> irá mostrar todos os campos
   end
 

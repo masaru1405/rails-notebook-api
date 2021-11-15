@@ -14,14 +14,16 @@ class ContactsController < ApplicationController
 
     #render json: @contact, include: [:kind, :phones] ## => sobreescreve as_json linha 26 do model Contact
 
-    render json: {
-      nome: @contact.name, 
-      email: @contact.email, 
-      data_nascimento: (I18n.l(@contact.birthdate) unless @contact.birthdate.blank?),
-      tipos: @contact.kind,
-      telefones: @contact.phones,
-      enderecos: @contact.address
-    }
+    # render json: {
+    #   nome: @contact.name, 
+    #   email: @contact.email, 
+    #   data_nascimento: (I18n.l(@contact.birthdate) unless @contact.birthdate.blank?),
+    #   tipos: @contact.kind,
+    #   telefones: @contact.phones,
+    #   enderecos: @contact.address
+    # }
+
+    render json: @contact, include: [:kind]#, meta: {author: "Kaio"}
   end
 
   # POST /contacts
