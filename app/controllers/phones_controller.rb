@@ -1,6 +1,7 @@
 class PhonesController < ApplicationController
    before_action :set_phones, only: [:show]
 
+   #GET /contacts/1/phones
    def show
       render json: @phones
    end
