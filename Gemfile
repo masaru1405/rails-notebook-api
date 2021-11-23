@@ -33,6 +33,7 @@ gem 'jwt'
 #gem 'devise'
 #gem 'devise_token_auth'
 
+gem 'versionist'
 
 
 group :development, :test do

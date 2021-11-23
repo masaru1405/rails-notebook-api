@@ -9,6 +9,9 @@ Rails.application.configure do
   }
 
   Rails.application.config.hosts << 'meusite.local'
+  Rails.application.config.hosts << 'v1.meusite.local'
+  Rails.application.config.hosts << 'v2.meusite.local'
+
 
   # In the development environment your application's code is reloaded any time
   # it changes. This slows down response time but is perfect for development
