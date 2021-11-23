@@ -29,6 +29,12 @@ gem 'rails-i18n', '~> 6.0.0'
 
 gem 'active_model_serializers', '~> 0.10.2'
 
+gem 'jwt'
+#gem 'devise'
+#gem 'devise_token_auth'
+
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
